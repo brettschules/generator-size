@@ -1,22 +1,25 @@
 import React, { Component } from 'react';
 
-export default class Name extends Component{
-  constructor(){
+export default class Home extends Component {
+  constructor() {
     super()
   }
 
   render() {
     return (
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-      <div class="center">
-        <label class="label">
-          <input  class="label__checkbox" type="checkbox" />
-          <span class="label__text">
-            <span class="label__check">
-              <i class="fa fa-check icon"></i>
-            </span>
-          </span>
-        </label>
+      <div>
+        <div class="cntr">
+          <label for="cbx" class="label-cbx">
+          <input id="cbx" type="checkbox" class="invisible" />
+          <div class="checkbox">
+            <svg width="20px" height="20px" viewBox="0 0 20 20">
+              <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
+              <polyline points="4 11 8 15 16 6"></polyline>
+            </svg>
+          </div>
+            <span>Checkbox</span>
+          </label>
+        </div>
       </div>
     )
   }
