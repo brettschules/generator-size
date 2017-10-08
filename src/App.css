@@ -152,7 +152,7 @@ html p {
   color: #666;
 }
 html .container {
-  
+
 }
 html .light, html .dark {
   padding: 2rem;
@@ -173,4 +173,34 @@ html .light {
   top: 0;
   left: 0;
   right: 0;
+}
+
+/*Total Watts Message*/
+.message #need {
+  margin-left: 400px
+}
+.message #running-watts {
+  margin-left: 450px
+}
+.message #starting-watts {
+  margin-left: 500px
+}
+.message #total-watts {
+  margin-left: 550px
+}
+
+/*container*/
+.recreational-use {
+  float: left;
+  margin-left: 75px
+}
+
+.storm-emergency-use {
+  margin-left: 60px;
+}
+
+.jobsite {
+  display: inline-block;
+  float: right;
+
 }
