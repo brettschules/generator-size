@@ -1,26 +1,33 @@
 import React, { Component } from 'react';
 
+
+  const checkboxes = ["hey"]
+
 export default class Home extends Component {
   constructor() {
     super()
   }
 
+
+
   render() {
+    console.log(checkboxes[0])
     return (
       <div>
-        <div class="cntr">
-          <label for="cbx" class="label-cbx">
-          <input id="cbx" type="checkbox" class="invisible" />
-          <div class="checkbox">
-            <svg width="20px" height="20px" viewBox="0 0 20 20">
-              <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
-              <polyline points="4 11 8 15 16 6"></polyline>
-            </svg>
+        <div class="container">
+          <ul>
+            <h3>Checkbox Examples</h3>
+              <li>
+                <input id="checkbox1" class="checkbox" type="checkbox" />
+                <label for="checkbox1">Label for checkbox 1 here in the flesh Label for checkbox 1 here in the flesh Label for checkbox 1 here in the flesh</label>
+              </li>
+              <li>
+                <input id="checkbox2" class="checkbox" type="checkbox" />
+                <label for="checkbox2">Label for 2</label>
+              </li>
+            </ul>
           </div>
-            <span>Checkbox</span>
-          </label>
         </div>
-      </div>
     )
   }
 }
