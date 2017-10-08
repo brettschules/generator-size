@@ -9,8 +9,8 @@ export default class checkboxes extends Component {
     return(
       <div>
         <li>
-          <input id="checkbox3" className="checkbox" type="checkbox" name="three" data-runningWatts = "5000" data-startingWatts = "5500" onChange={this.props.handleInputChange}/>
-          <label for="checkbox3">test  </label>
+          <input id={this.props.title} className="checkbox" type="checkbox" name="title" data-runningWatts = {this.props.watts.runningWatts} data-startingWatts = {this.props.watts.startingWatts} onChange={this.props.handleInputChange}/>
+          <label for={this.props.title}>{this.props.title}</label>
         </li>
       </div>
     )

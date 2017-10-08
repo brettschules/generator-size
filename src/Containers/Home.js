@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Checkboxes from '../Components/Checkboxes'
+import TotalWattsMessage from '../Components/TotalWattsMessage'
 import DataAppliancesAPI from '../dataAppliancesAPI'
 
 
@@ -9,6 +10,7 @@ export default class Home extends Component {
     this.state = {
       runningWatts: 0,
       startingWatts: 0,
+      totalStartingWatts: 0,
       checkboxesResults: ""
     }
   }
@@ -19,32 +21,40 @@ export default class Home extends Component {
     this.setState({
       checkboxesResults: {...this.state.checkboxesResuls, [event.target.name]: [convertRunningWattsToInt, convertStartingWattsToInt]},
       runningWatts: event.target.checked ? this.state.runningWatts += convertRunningWattsToInt : this.state.runningWatts -= convertRunningWattsToInt,
-      startingWatts: event.target.checked ? this.state.startingWatts += convertStartingWattsToInt : this.state.startingWatts -= convertStartingWattsToInt
+      startingWatts: event.target.checked ? this.state.startingWatts += convertStartingWattsToInt : this.state.startingWatts -= convertStartingWattsToInt,
+      totalStartingWatts: this.state.runningWatts + this.state.startingWatts
     })
   }
 
   render() {
 
-    console.log(this.state.runningWatts)
-    console.log(this.state.startingWatts)
-    console.log(DataAppliancesAPI)
+    console.log(this.state.runningWatts, 'run')
+    console.log(this.state.startingWatts,"start")
+    console.log(this.state.totalStartingWatts, "total")
     return (
       <div>
         <div className="container">
+          <TotalWattsMessage runningWatts = {this.state.runningWatts} startingWatts = {this.state.startingWatts} totalStartingWatts = {this.state.totalStartingWatts} />
           <ul>
             <h3>Recreational Use</h3>
-              <Checkboxes Data = {DataAppliancesAPI["Recreational Use"]}/>
-            </ul>
-            <ul>
-              <h3>Storm Emergency Use</h3>
-                <Checkboxes Data = {DataAppliancesAPI["Storm Emergency Use"]} />
-              </ul>
-              <ul>
-                <h3>Jobsite</h3>
-                  <Checkboxes Data =  {DataAppliancesAPI["Jobsite"]} />
-              </ul>
-          </div>
+              {DataAppliancesAPI["Recreational Use"].map(Recreational =>
+                <Checkboxes title = {Recreational.title} watts={Recreational.watts} handleInputChange={this.handleInputChange}/>
+              )}
+          </ul>
+          <ul>
+            <h3>Storm Emergency Use</h3>
+              {DataAppliancesAPI["Storm Emergency Use"].map(Storm =>
+                <Checkboxes title = {Storm.title} watts={Storm.watts} handleInputChange={this.handleInputChange}/>
+              )}
+          </ul>
+          <ul>
+            <h3>Jobsite</h3>
+              {DataAppliancesAPI["Jobsite"].map(Jobsite =>
+                <Checkboxes title = {Jobsite.title} watts={Jobsite.watts} handleInputChange={this.handleInputChange}/>
+              )}
+          </ul>
         </div>
+      </div>
     )
   }
 }

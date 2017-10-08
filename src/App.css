@@ -152,14 +152,7 @@ html p {
   color: #666;
 }
 html .container {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
+  
 }
 html .light, html .dark {
   padding: 2rem;
