@@ -87,6 +87,7 @@ input.radio + label {
   position: relative;
   padding: calc(1.8rem - 1.8rem * 0.54) 0 0.5rem calc(1.8rem + 1rem);
   min-height: 1.8rem;
+  width: 100px;
 }
 input.checkbox + label:hover,
 input.radio + label:hover {
@@ -147,6 +148,7 @@ html ul {
 html h3 {
   text-transform: uppercase;
   color: #888;
+  display: flex;
 }
 html p {
   color: #666;
@@ -176,6 +178,7 @@ html .light {
 }
 
 /*Total Watts Message*/
+
 .message #need {
   margin-left: 400px
 }
@@ -192,15 +195,32 @@ html .light {
 /*container*/
 .recreational-use {
   float: left;
-  margin-left: 75px
+  margin-left: 50px
 }
 
 .storm-emergency-use {
-  margin-left: 60px;
+  margin-left: 70px;
+  height: 350px;
+  width: 350px;
+  overflow-y:scroll;
 }
 
 .jobsite {
   display: inline-block;
   float: right;
 
+}
+html h3 .watts {
+  margin-left: 70px;
+}
+
+.running-watts {
+  font-size: 11px;
+  margin-left: 50px;
+  display: inline-grid;
+}
+
+.starting-watts {
+  font-size: 11px;
+  float: right;
 }
