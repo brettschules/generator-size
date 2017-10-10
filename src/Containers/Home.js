@@ -35,28 +35,40 @@ export default class Home extends Component {
       <div>
         <div className="container">
           <TotalWattsMessage runningWatts = {this.state.runningWatts} startingWatts = {this.state.startingWatts} totalStartingWatts = {this.state.totalStartingWatts} />
-          <div className="recreational-use">
+          <table>
+          <tr>
+          <td className="recreational-use-container">
+          <table className="recreational-use">
           <ul>
-            <h3>Recreational Use<span className="watts">Running Watts</span><span className="watts">Starting Watts</span></h3>
+            <tr><th>Recreational Use</th><th>Running Watts</th><th> Starting Watts</th></tr>
               {DataAppliancesAPI["Recreational Use"].map(Recreational =>
                 <Checkboxes title = {Recreational.title} watts={Recreational.watts} handleInputChange={this.handleInputChange}/>
               )}
           </ul>
-          </div>
-          <ul className="storm-emergency-use">
-            <h3>Storm Emergency Use<span className="watts">Running Watts</span><span className="watts">Starting Watts</span></h3>
+          </table>
+          </td>
+          <td className="storm-emergency-use-container">
+          <table className="storm-emergency-use">
+          <ul>
+            <tr><th>Storm Emergency Use</th><th>Running Watts</th><th> Starting Watts</th></tr>
               {DataAppliancesAPI["Storm Emergency Use"].map(Storm =>
                 <Checkboxes title = {Storm.title} watts={Storm.watts} handleInputChange={this.handleInputChange}/>
               )}
           </ul>
-          <div className="jobsite">
+          </table>
+          </td>
+          <td className="jobsite-container">
+          <table className="jobsite">
           <ul>
-            <h3>Jobsite<span className="watts">Running Watts</span><span className="watts">Starting Watts</span></h3>
+            <tr><th>Jobsite</th><th>Running Watts</th><th> Starting Watts</th></tr>
               {DataAppliancesAPI["Jobsite"].map(Jobsite =>
                 <Checkboxes title = {Jobsite.title} watts={Jobsite.watts} handleInputChange={this.handleInputChange}/>
               )}
           </ul>
-          </div>
+          </table>
+          </td>
+          </tr>
+        </table>
         </div>
       </div>
     )

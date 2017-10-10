@@ -193,15 +193,23 @@ html .light {
 }
 
 /*container*/
+.recreational-use-container {
+  display: inline;
+}
+
+.jobsite-container {
+  display: inline;
+}
+
 .recreational-use {
   float: left;
   margin-left: 50px
 }
 
-ul.storm-emergency-use {
+.storm-emergency-use {
   margin-left: 70px;
   height: 350px;
-  width: 350px;
+  width: 360px;
   overflow-y:scroll;
 }
 
@@ -216,11 +224,12 @@ html h3 .watts {
 
 .running-watts {
   font-size: 11px;
-  margin-left: 50px;
+  margin-left: 80px;
   display: inline-grid;
 }
 
 .starting-watts {
   font-size: 11px;
   float: right;
+  margin-top: 40px;
 }
