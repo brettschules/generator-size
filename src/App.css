@@ -179,8 +179,8 @@ html .light {
 
 /*Total Watts Message*/
 .message {
+  margin-bottom: 5%;
 }
-
 .message #need {
   display: flex;
   margin-left: 30%
@@ -202,7 +202,7 @@ html .light {
 .check-list {
   display: flex;
   flex-direction: row;
-
+  justify-content: space-evenly
 }
 
 .recreational-use-container {
@@ -217,17 +217,13 @@ html .light {
   justify-content: flex-end;
 }
 
-.recreational-use {
-  float: left;
-  margin-left: 50px
-}
 
-.storm-emergency-use {
+/*.storm-emergency-use {
   margin-left: 70px;
   height: 350px;
   width: 360px;
   overflow-y:scroll;
-}
+}*/
 
 
 .jobsite-headers {
@@ -235,24 +231,32 @@ html .light {
   flex-direction: row;
   width: 400px;
 }
-html h3 .watts {
-  margin-left: 70px;
-}
+
 
 .list-headers {
   display: flex;
   flex-direction: row;
 }
 
+.list-headers .h3 {
+
+}
+
+.checkbox-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 .running-watts {
   font-size: 15px;
-  margin-left: 80px;
-  display: inline-grid;
+  /*margin-left: 80px;
+  display: inline-grid;*/
 }
 
 .starting-watts {
   font-size: 15px;
-  margin-top: 40px;
+  /*margin-top: 40px;
   display: inline-grid;
-  margin-left: 50px;
+  margin-left: 50px;*/
 }
