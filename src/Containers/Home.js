@@ -38,7 +38,7 @@ export default class Home extends Component {
           <div className="check-list">
             <div className="recreational-use-container">
             <div className="recreational-use">
-              <div className="list-headers"><h3>Recreational Use</h3><h3>Running Watts</h3><h3> Starting Watts</h3></div>
+              <div className="list-headers"><h3><span>Recreational Use</span><span>Running Watts</span><span>Starting Watts</span></h3></div>
                 {DataAppliancesAPI["Recreational Use"].map(Recreational =>
                   <Checkboxes title = {Recreational.title} watts={Recreational.watts} handleInputChange={this.handleInputChange}/>
                 )}
@@ -46,7 +46,7 @@ export default class Home extends Component {
             </div>
             <div className="storm-emergency-use-container">
             <div className="storm-emergency-use">
-              <div className="list-headers"><h3>Storm Emergency Use</h3><h3>Running Watts</h3><h3> Starting Watts</h3></div>
+              <div className="list-headers"><h3><span>Storm Emergency</span><span>Running Watts</span><span>Starting Watts</span></h3></div>
                 {DataAppliancesAPI["Storm Emergency Use"].map(Storm =>
                   <Checkboxes title = {Storm.title} watts={Storm.watts} handleInputChange={this.handleInputChange}/>
                 )}
@@ -54,7 +54,7 @@ export default class Home extends Component {
             </div>
             <div className="jobsite-container">
             <div className="jobsite">
-            <div className="list-headers"><h3>Jobsite Use</h3><h3>Running Watts</h3><h3> Starting Watts</h3></div>
+              <div className="list-headers"><h3><span>Jobsite Use</span><span>Running Watts</span><span>Starting Watts</span></h3></div>
                 {DataAppliancesAPI["Jobsite"].map(Jobsite =>
                   <Checkboxes title = {Jobsite.title} watts={Jobsite.watts} handleInputChange={this.handleInputChange}/>
                 )}

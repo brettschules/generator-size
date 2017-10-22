@@ -87,7 +87,7 @@ input.radio + label {
   position: relative;
   padding: calc(1.8rem - 1.8rem * 0.54) 0 0.5rem calc(1.8rem + 1rem);
   min-height: 1.8rem;
-  width: 100px;
+  width: 45%;
 }
 input.checkbox + label:hover,
 input.radio + label:hover {
@@ -145,11 +145,7 @@ html ul {
   width: 30rem;
   margin-right: 5rem;
 }
-html h3 {
-  text-transform: uppercase;
-  color: #888;
-  display: flex;
-}
+
 html p {
   color: #666;
 }
@@ -235,27 +231,36 @@ html .light {
 
 .list-headers {
   display: flex;
-  flex-direction: row;
+  text-transform: uppercase;
+  margin-bottom: 10%
 }
 
-.list-headers .h3 {
-
+.list-headers h3 {
+  justify-content: space-between;
+  display: inline-flex;
+  width: 100%
 }
+.list-headers span {
+  margin-left: 12%;
+  margin-right: 2%;
+}
+
 
 .checkbox-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
 }
 
 .running-watts {
   font-size: 15px;
+  margin-left: 12%
   /*margin-left: 80px;
   display: inline-grid;*/
 }
 
 .starting-watts {
   font-size: 15px;
+  margin-left: auto;
   /*margin-top: 40px;
   display: inline-grid;
   margin-left: 50px;*/
