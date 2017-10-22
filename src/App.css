@@ -178,9 +178,12 @@ html .light {
 }
 
 /*Total Watts Message*/
+.message {
+}
 
 .message #need {
-  margin-left: 400px
+  display: flex;
+  margin-left: 40%
 }
 .message #running-watts {
   margin-left: 450px
