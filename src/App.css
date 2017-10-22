@@ -183,16 +183,19 @@ html .light {
 
 .message #need {
   display: flex;
-  margin-left: 40%
+  margin-left: 30%
 }
 .message #running-watts {
-  margin-left: 450px
+  display: flex;
+  margin-left: 35%
 }
 .message #starting-watts {
-  margin-left: 500px
+  display: flex;
+  margin-left: 40%
 }
 .message #total-watts {
-  margin-left: 550px
+  display: flex;
+  margin-left: 45%
 }
 
 /*container*/

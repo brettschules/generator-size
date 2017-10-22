@@ -35,7 +35,7 @@ export default class Home extends Component {
       <div>
         <div className="container">
           <TotalWattsMessage runningWatts = {this.state.runningWatts} startingWatts = {this.state.startingWatts} totalStartingWatts = {this.state.totalStartingWatts} />
-          <table>
+          <div className="check-list">
           <tr>
           <td className="recreational-use-container">
           <table className="recreational-use">
@@ -68,7 +68,7 @@ export default class Home extends Component {
           </table>
           </td>
           </tr>
-        </table>
+        </div>
         </div>
       </div>
     )
