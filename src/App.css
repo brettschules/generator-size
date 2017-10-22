@@ -216,7 +216,12 @@ html .light {
 .jobsite {
   display: inline-block;
   float: right;
+}
 
+.jobsite-headers {
+  display: flex;
+  flex-direction: row;
+  width: 400px;
 }
 html h3 .watts {
   margin-left: 70px;

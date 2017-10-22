@@ -60,7 +60,7 @@ export default class Home extends Component {
           <td className="jobsite-container">
           <table className="jobsite">
           <ul>
-            <tr><th>Jobsite</th><th>Running Watts</th><th> Starting Watts</th></tr>
+            <tr className="jobsite-headers"><th>Jobsite</th><th>Running Watts</th><th> Starting Watts</th></tr>
               {DataAppliancesAPI["Jobsite"].map(Jobsite =>
                 <Checkboxes title = {Jobsite.title} watts={Jobsite.watts} handleInputChange={this.handleInputChange}/>
               )}
