@@ -36,39 +36,31 @@ export default class Home extends Component {
         <div className="container">
           <TotalWattsMessage runningWatts = {this.state.runningWatts} startingWatts = {this.state.startingWatts} totalStartingWatts = {this.state.totalStartingWatts} />
           <div className="check-list">
-          <tr>
-          <td className="recreational-use-container">
-          <table className="recreational-use">
-          <ul>
-            <tr><th>Recreational Use</th><th>Running Watts</th><th> Starting Watts</th></tr>
-              {DataAppliancesAPI["Recreational Use"].map(Recreational =>
-                <Checkboxes title = {Recreational.title} watts={Recreational.watts} handleInputChange={this.handleInputChange}/>
-              )}
-          </ul>
-          </table>
-          </td>
-          <td className="storm-emergency-use-container">
-          <table className="storm-emergency-use">
-          <ul>
-            <tr><th>Storm Emergency Use</th><th>Running Watts</th><th> Starting Watts</th></tr>
-              {DataAppliancesAPI["Storm Emergency Use"].map(Storm =>
-                <Checkboxes title = {Storm.title} watts={Storm.watts} handleInputChange={this.handleInputChange}/>
-              )}
-          </ul>
-          </table>
-          </td>
-          <td className="jobsite-container">
-          <table className="jobsite">
-          <ul>
-            <tr className="jobsite-headers"><th>Jobsite</th><th>Running Watts</th><th> Starting Watts</th></tr>
-              {DataAppliancesAPI["Jobsite"].map(Jobsite =>
-                <Checkboxes title = {Jobsite.title} watts={Jobsite.watts} handleInputChange={this.handleInputChange}/>
-              )}
-          </ul>
-          </table>
-          </td>
-          </tr>
-        </div>
+            <div className="recreational-use-container">
+            <div className="recreational-use">
+              <div className="list-headers"><h3>Recreational Use</h3><h3>Running Watts</h3><h3> Starting Watts</h3></div>
+                {DataAppliancesAPI["Recreational Use"].map(Recreational =>
+                  <Checkboxes title = {Recreational.title} watts={Recreational.watts} handleInputChange={this.handleInputChange}/>
+                )}
+            </div>
+            </div>
+            <div className="storm-emergency-use-container">
+            <div className="storm-emergency-use">
+              <div className="list-headers"><h3>Storm Emergency Use</h3><h3>Running Watts</h3><h3> Starting Watts</h3></div>
+                {DataAppliancesAPI["Storm Emergency Use"].map(Storm =>
+                  <Checkboxes title = {Storm.title} watts={Storm.watts} handleInputChange={this.handleInputChange}/>
+                )}
+            </div>
+            </div>
+            <div className="jobsite-container">
+            <div className="jobsite">
+            <div className="list-headers"><h3>Jobsite Use</h3><h3>Running Watts</h3><h3> Starting Watts</h3></div>
+                {DataAppliancesAPI["Jobsite"].map(Jobsite =>
+                  <Checkboxes title = {Jobsite.title} watts={Jobsite.watts} handleInputChange={this.handleInputChange}/>
+                )}
+            </div>
+            </div>
+          </div>
         </div>
       </div>
     )

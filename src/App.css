@@ -199,12 +199,22 @@ html .light {
 }
 
 /*container*/
+.check-list {
+  display: flex;
+  flex-direction: row;
+
+}
+
 .recreational-use-container {
-  display: inline;
+  justify-content: flex-start;
+}
+
+.storm-emergency-use-container {
+  justify-content: center;
 }
 
 .jobsite-container {
-  display: inline;
+  justify-content: flex-end;
 }
 
 .recreational-use {
@@ -219,10 +229,6 @@ html .light {
   overflow-y:scroll;
 }
 
-.jobsite {
-  display: inline-block;
-  float: right;
-}
 
 .jobsite-headers {
   display: flex;
@@ -231,6 +237,11 @@ html .light {
 }
 html h3 .watts {
   margin-left: 70px;
+}
+
+.list-headers {
+  display: flex;
+  flex-direction: row;
 }
 
 .running-watts {
