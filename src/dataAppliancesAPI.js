@@ -10,12 +10,16 @@ const APPLIANCES = {
       "watts": {"runningWatts": "25", "startingWatts": "0"}
     },
     {
-      "title": "Cell Phone Batter",
+      "title": "Cell Phone Battery Charger",
       "watts": {"runningWatts": "25", "startingWatts": "0"}
     },
     {
       "title": "Inflator Pump",
       "watts": {"runningWatts": "50", "startingWatts": "150" }
+    },
+    {
+      "title": "Outdoor Light String",
+      "watts": {"runningWatts": "250", "startingWatts": "0" }
     }
   ],
   "Storm Emergency Use": [
@@ -83,6 +87,18 @@ const APPLIANCES = {
       {
         "title": "Table Saw",
         "watts": {"runningWatts": "2000", "startingWatts": "2000" }
+      },
+      {
+        "title": "Belt Sander",
+        "watts": {"runningWatts": "950", "startingWatts": "2400"}
+      },
+      {
+        "title": "Bench Grinder",
+        "watts": {"runningWatts": "1400", "startingWatts": "2500"}
+      },
+      {
+        "title": "Pressure Washer",
+        "watts": {"runningWatts": "1200", "startingWatts": "3600"}
       }
     ]
   }

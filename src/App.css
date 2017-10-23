@@ -220,8 +220,11 @@ html .light {
   padding-right: 3%;
 }
 
-.jobsite-container {
+.jobsite {
   justify-content: flex-end;
+  height: 70%;
+  overflow-y: scroll;
+  padding-right: 3%;
 }
 
 
