@@ -48,7 +48,7 @@ export default class Home extends Component {
                 )}
             </div>
             </div>
-            <div className="storm-emergency-use-container">
+            <div className="storm-emergency-use-container" >
             <div className="storm-emergency-use">
               <div className="list-headers"><h3><span>Storm Emergency</span><span>Running Watts</span><span>Starting Watts</span></h3></div>
                 {DataAppliancesAPI["Storm Emergency Use"].map(Storm =>
@@ -66,7 +66,7 @@ export default class Home extends Component {
             </div>
           </div>
         </div>
-        <Footer />
+        <Footer/>
       </div>
     )
   }

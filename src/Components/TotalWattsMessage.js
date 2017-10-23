@@ -35,7 +35,6 @@ export default class TotalWattsMessage extends Component{
     this.updateRunningWatts()
 
     this.updateTotalWatts()
-    console.log(nextProps, 'asdfjl')
 
     if (parseInt(nextProps.currentStartingWatts, 10) !== 0)
       this.updateStartingWatts()

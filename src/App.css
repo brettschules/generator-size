@@ -217,6 +217,7 @@ html .light {
 .storm-emergency-use {
   height: 70%;
   overflow-y: scroll;
+  padding-right: 3%;
 }
 
 .jobsite-container {
