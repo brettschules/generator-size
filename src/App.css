@@ -149,9 +149,7 @@ html ul {
 html p {
   color: #666;
 }
-html .container {
 
-}
 html .light, html .dark {
   padding: 2rem;
   overflow: hidden;
@@ -173,6 +171,9 @@ html .light {
   right: 0;
 }
 
+.container {
+  margin-bottom: -150px;
+}
 /*Total Watts Message*/
 .message {
   margin-bottom: 5%;
@@ -203,8 +204,15 @@ html .light {
 .check-list {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly
+  justify-content: space-evenly;
+  height: 80%;
 }
+
+/*.recreational-use {
+  height: 70%;
+  overflow-y: scroll;
+  padding-right: 3%;
+}*/
 
 .recreational-use-container {
   justify-content: flex-start;
@@ -215,14 +223,17 @@ html .light {
 }
 
 .storm-emergency-use {
-  height: 70%;
+  height: 65%;
   overflow-y: scroll;
   padding-right: 3%;
 }
 
-.jobsite {
+.jobsite-container {
   justify-content: flex-end;
-  height: 70%;
+}
+
+.jobsite {
+  height: 65%;
   overflow-y: scroll;
   padding-right: 3%;
 }
