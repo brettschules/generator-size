@@ -176,22 +176,27 @@ html .light {
 /*Total Watts Message*/
 .message {
   margin-bottom: 5%;
+  margin-top: 3%;
 }
 .message #need {
   display: flex;
-  margin-left: 30%
+  margin-left: 30%;
+  line-height: 5%;
 }
 .message #running-watts {
   display: flex;
-  margin-left: 35%
+  margin-left: 35%;
+  line-height: 5%;
 }
 .message #starting-watts {
   display: flex;
-  margin-left: 40%
+  margin-left: 40%;
+  line-height: 5%;
 }
 .message #total-watts {
   display: flex;
-  margin-left: 45%
+  margin-left: 45%;
+  line-height: 5%;
 }
 
 /*container*/
@@ -207,6 +212,11 @@ html .light {
 
 .storm-emergency-use-container {
   justify-content: center;
+}
+
+.storm-emergency-use {
+  height: 70%;
+  overflow-y: scroll;
 }
 
 .jobsite-container {
@@ -264,4 +274,10 @@ html .light {
   /*margin-top: 40px;
   display: inline-grid;
   margin-left: 50px;*/
+}
+
+footer h2 {
+  display: flex;
+  justify-content: center;
+  color: rgb(16, 81, 164)
 }

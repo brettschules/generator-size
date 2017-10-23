@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Checkboxes from '../Components/Checkboxes'
 import TotalWattsMessage from '../Components/TotalWattsMessage'
 import DataAppliancesAPI from '../dataAppliancesAPI'
+import Footer from '../Components/Footer'
 
 
 export default class Home extends Component {
@@ -62,6 +63,7 @@ export default class Home extends Component {
             </div>
           </div>
         </div>
+        <Footer />
       </div>
     )
   }
