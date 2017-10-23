@@ -5,6 +5,42 @@ export default class TotalWattsMessage extends Component{
     super()
   }
 
+  // this will update the watts values in message container using css transition
+  updateRunningWatts = () => {
+    var run = document.getElementById("running-watts")
+    run.className = "new"
+    setTimeout(function() {
+      run.className = "after"
+    }, 550);
+  }
+
+  updateStartingWatts = () => {
+    var start = document.getElementById("starting-watts")
+    start.className = "new"
+    setTimeout(function() {
+      start.className = "after"
+    }, 550);
+  }
+
+  updateTotalWatts = () => {
+    var total = document.getElementById("total-watts")
+    total.className = "new"
+    setTimeout(function() {
+      total.className = "after"
+    }, 550);
+  }
+
+
+  componentWillReceiveProps(nextProps) {
+    this.updateRunningWatts()
+
+    this.updateTotalWatts()
+    console.log(nextProps, 'asdfjl')
+
+    if (nextProps.startingWatts !== 0)
+      this.updateStartingWatts()
+  }
+
   render() {
     return(
       <div className="message">

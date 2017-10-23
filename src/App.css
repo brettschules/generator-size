@@ -281,3 +281,16 @@ footer h2 {
   justify-content: center;
   color: rgb(16, 81, 164)
 }
+
+/*change numbers in message container*/
+.new {
+    opacity: 0;
+}
+
+#running-watts, .new {
+    transition: opacity 0.5s linear;
+}
+
+.after {
+  opacity:1;
+}

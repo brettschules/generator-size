@@ -16,6 +16,13 @@ export default class Home extends Component {
     }
   }
 
+
+  transformWattsCSS = (event) => {
+    if (event.target.dataset.runningwatts !== 0) {
+      document.getElementById("running-watts").element.className("new");
+    }
+  }
+
   handleInputChange = (event) => {
     let convertRunningWattsToInt = parseInt(event.target.dataset.runningwatts, 10)
     let convertStartingWattsToInt = parseInt(event.target.dataset.startingwatts, 10)
