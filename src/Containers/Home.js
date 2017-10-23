@@ -9,6 +9,7 @@ export default class Home extends Component {
   constructor() {
     super()
     this.state = {
+      currentStartingWatts: 0,
       runningWatts: 0,
       startingWatts: 0,
       totalStartingWatts: 0,
@@ -17,16 +18,11 @@ export default class Home extends Component {
   }
 
 
-  transformWattsCSS = (event) => {
-    if (event.target.dataset.runningwatts !== 0) {
-      document.getElementById("running-watts").element.className("new");
-    }
-  }
-
   handleInputChange = (event) => {
     let convertRunningWattsToInt = parseInt(event.target.dataset.runningwatts, 10)
     let convertStartingWattsToInt = parseInt(event.target.dataset.startingwatts, 10)
     this.setState({
+      currentStartingWatts: event.target.dataset.startingwatts,
       checkboxesResults: {...this.state.checkboxesResuls, [event.target.name]: [convertRunningWattsToInt, convertStartingWattsToInt]},
       runningWatts: event.target.checked ? this.state.runningWatts += convertRunningWattsToInt : this.state.runningWatts -= convertRunningWattsToInt,
       startingWatts: event.target.checked ? this.state.startingWatts += convertStartingWattsToInt : this.state.startingWatts -= convertStartingWattsToInt,
@@ -42,7 +38,7 @@ export default class Home extends Component {
     return (
       <div>
         <div className="container">
-          <TotalWattsMessage runningWatts = {this.state.runningWatts} startingWatts = {this.state.startingWatts} totalStartingWatts = {this.state.totalStartingWatts} />
+          <TotalWattsMessage runningWatts = {this.state.runningWatts} startingWatts = {this.state.startingWatts} totalStartingWatts = {this.state.totalStartingWatts} currentStartingWatts={this.state.currentStartingWatts}/>
           <div className="check-list">
             <div className="recreational-use-container">
             <div className="recreational-use">
