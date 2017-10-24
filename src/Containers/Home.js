@@ -3,6 +3,7 @@ import Checkboxes from '../Components/Checkboxes'
 import TotalWattsMessage from '../Components/TotalWattsMessage'
 import DataAppliancesAPI from '../dataAppliancesAPI'
 import Footer from '../Components/Footer'
+import { Col, Table } from 'react-bootstrap';
 
 
 export default class Home extends Component {
@@ -40,33 +41,33 @@ export default class Home extends Component {
         <div className="container">
           <TotalWattsMessage runningWatts = {this.state.runningWatts} startingWatts = {this.state.startingWatts} totalStartingWatts = {this.state.totalStartingWatts} currentStartingWatts={this.state.currentStartingWatts}/>
           <div className="check-list">
-            <div className="recreational-use-container">
+            <Col  md={4}>
             <div className="recreational-use">
-              <div className="list-headers"><h3><span>Recreational Use</span><span>Running Watts</span><span>Starting Watts</span></h3></div>
+              <div className="list-headers"><h3><span>Recreational</span><span className="running-watts-title">Running Watts</span><span className="starting-watts-title">Starting Watts</span></h3></div>
                 {DataAppliancesAPI["Recreational Use"].map(Recreational =>
                   <Checkboxes title = {Recreational.title} watts={Recreational.watts} handleInputChange={this.handleInputChange}/>
                 )}
-            </div>
-            </div>
-            <div className="storm-emergency-use-container" >
+              </div>
+            </Col>
+            <Col  md={4} storm-emergency-use-container>
             <div className="storm-emergency-use">
-              <div className="list-headers"><h3><span>Storm Emergency</span><span>Running Watts</span><span>Starting Watts</span></h3></div>
+              <div className="list-headers"><h3><span>Storm Emergency</span><span className="running-watts-title">Running Watts</span><span className="starting-watts-title">Starting Watts</span></h3></div>
                 {DataAppliancesAPI["Storm Emergency Use"].map(Storm =>
                   <Checkboxes title = {Storm.title} watts={Storm.watts} handleInputChange={this.handleInputChange}/>
                 )}
             </div>
-            </div>
-            <div className="jobsite-container">
+            </Col>
+            <Col  md={4}>
             <div className="jobsite">
-              <div className="list-headers"><h3><span>Jobsite Use</span><span>Running Watts</span><span>Starting Watts</span></h3></div>
+              <div className="list-headers"><h3><span>Jobsite Use</span><span className="running-watts-title">Running Watts</span><span className="starting-watts-title">Starting Watts</span></h3></div>
                 {DataAppliancesAPI["Jobsite"].map(Jobsite =>
                   <Checkboxes title = {Jobsite.title} watts={Jobsite.watts} handleInputChange={this.handleInputChange}/>
                 )}
             </div>
-            </div>
+            </Col>
           </div>
         </div>
-        <Footer/>
+        <Footer />
       </div>
     )
   }

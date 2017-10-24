@@ -171,93 +171,45 @@ html .light {
   right: 0;
 }
 
-.container {
-  margin-bottom: -150px;
-}
 /*Total Watts Message*/
 .message {
-  margin-bottom: 5%;
+  margin-bottom: 14%;
   margin-top: 3%;
+
 }
 .message #need {
-  display: flex;
-  margin-left: 30%;
-  line-height: 5%;
+  font-size: 1.5em;
 }
 .message #running-watts {
-  display: flex;
-  margin-left: 35%;
-  line-height: 5%;
+  font-size: 1.5em;
 }
 .message #starting-watts {
-  display: flex;
-  margin-left: 40%;
-  line-height: 5%;
+  font-size: 1.5em;
 }
 .message #total-watts {
-  display: flex;
-  margin-left: 45%;
-  line-height: 5%;
+  font-size: 1.5em;
 }
 
 /*container*/
-.check-list {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  height: 80%;
+.container {
+  display: relative;
 }
 
-/*.recreational-use {
-  height: 70%;
-  overflow-y: scroll;
-  padding-right: 3%;
-}*/
-
-.recreational-use-container {
-  justify-content: flex-start;
+h3 {
+  font-size: 1.2em;
 }
 
-.storm-emergency-use-container {
-  justify-content: center;
+.running-watts-title {
+  padding-left: 24%
 }
 
-.storm-emergency-use {
-  height: 65%;
-  overflow-y: scroll;
-  padding-right: 3%;
+.starting-watts-title {
+  padding-left: 17%
 }
-
-.jobsite-container {
-  justify-content: flex-end;
-}
-
-.jobsite {
-  height: 65%;
-  overflow-y: scroll;
-  padding-right: 3%;
-}
-
-
-/*.storm-emergency-use {
-  margin-left: 70px;
-  height: 350px;
-  width: 360px;
-  overflow-y:scroll;
-}*/
-
-
-.jobsite-headers {
-  display: flex;
-  flex-direction: row;
-  width: 400px;
-}
-
-
 .list-headers {
-  display: flex;
+  /*display: flex;
   text-transform: uppercase;
-  margin-bottom: 10%
+  margin-bottom: 10%*/
 }
 
 .list-headers h3 {
@@ -265,11 +217,6 @@ html .light {
   display: inline-flex;
   width: 100%
 }
-.list-headers span {
-  margin-left: 12%;
-  margin-right: 2%;
-}
-
 
 .checkbox-container {
   display: flex;
