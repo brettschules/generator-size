@@ -75,13 +75,11 @@ input.toggle:checked + label:after {
   box-shadow: none;
 }
 
-input.checkbox,
-input.radio {
+input.checkbox {
   display: none;
 }
 
-input.checkbox + label,
-input.radio + label {
+input.checkbox + label {
   display: inline-block;
   line-height: 1.7;
   position: relative;
@@ -89,13 +87,11 @@ input.radio + label {
   min-height: 1.8rem;
   width: 45%;
 }
-input.checkbox + label:hover,
-input.radio + label:hover {
+input.checkbox + label:hover {
   cursor: pointer;
 }
 
-input.checkbox + label:before,
-input.radio + label:before {
+input.checkbox + label:before {
   content: "";
   height: 1.8rem;
   width: 1.8rem;
@@ -105,12 +101,11 @@ input.radio + label:before {
   background-repeat: no-repeat;
 }
 
-input.radio[disabled] + label:before,
+
 input.checkbox[disabled] + label:before {
   opacity: 0.5;
 }
 
-input.radio[disabled] + label,
 input.checkbox[disabled] + label {
   color: rgba(0, 0, 0, 0.3);
 }
@@ -121,14 +116,6 @@ input.checkbox:checked + label:before {
 
 input.checkbox + label:before {
   background-image: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIKCSB2aWV3Qm94PSIwIDAgMjQgMjQiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDI0IDI0IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPGc+Cgk8ZyBvcGFjaXR5PSIwLjQ4Ij4KCQk8cGF0aCBmaWxsPSIjQkJCREJGIiBkPSJNMjAsMEg0QzEuOCwwLDAsMS44LDAsNHYxNmMwLDIuMiwxLjgsNCw0LDRoMTZjMi4yLDAsNC0xLjgsNC00VjRDMjQsMS44LDIyLjIsMCwyMCwweiBNMjEsMTkKCQkJYzAsMS4xLTAuOSwyLTIsMkg1Yy0xLjEsMC0yLTAuOS0yLTJWNWMwLTEuMSwwLjktMiwyLTJoMTRjMS4xLDAsMiwwLjksMiwyVjE5eiIvPgoJPC9nPgo8L2c+Cjwvc3ZnPg==);
-}
-
-input.radio:checked + label:before {
-  background: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIKCSB2aWV3Qm94PSIwIDAgMjQgMjQiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDI0IDI0IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPGc+Cgk8cGF0aCBvcGFjaXR5PSIwLjQ4IiBmaWxsPSIjMkE5OTc3IiBkPSJNMTIsMEM1LjQsMCwwLDUuNCwwLDEyYzAsNi42LDUuNCwxMiwxMiwxMnMxMi01LjQsMTItMTJDMjQsNS40LDE4LjYsMCwxMiwweiBNMTIsMjIKCQlDNi41LDIyLDIsMTcuNSwyLDEyQzIsNi41LDYuNSwyLDEyLDJzMTAsNC41LDEwLDEwQzIyLDE3LjUsMTcuNSwyMiwxMiwyMnoiLz4KPC9nPgo8Y2lyY2xlIGZpbGw9IiM0QUJCOEYiIGN4PSIxMiIgY3k9IjEyIiByPSI4Ii8+Cjwvc3ZnPg==);
-}
-
-input.radio + label:before {
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIKCSB2aWV3Qm94PSIwIDAgMjQgMjQiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDI0IDI0IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPGNpcmNsZSBvcGFjaXR5PSIwLjQ4IiBmaWxsPSIjQkJCREJGIiBjeD0iMTIiIGN5PSIxMiIgcj0iMTAiLz4KPC9zdmc+);
 }
 
 html {
@@ -173,9 +160,9 @@ html .light {
 
 /*Total Watts Message*/
 .message {
-  margin-bottom: 14%;
-  margin-top: 3%;
-
+  margin-bottom: 14px;
+  margin-top: 3px;
+  font-size: 25px;
 }
 .message #need {
   font-size: 1.5em;
@@ -206,11 +193,6 @@ h3 {
 .starting-watts-title {
   padding-left: 17%
 }
-.list-headers {
-  /*display: flex;
-  text-transform: uppercase;
-  margin-bottom: 10%*/
-}
 
 .list-headers h3 {
   justify-content: space-between;
@@ -226,16 +208,11 @@ h3 {
 .running-watts {
   font-size: 15px;
   margin-left: 12%
-  /*margin-left: 80px;
-  display: inline-grid;*/
 }
 
 .starting-watts {
   font-size: 15px;
   margin-left: auto;
-  /*margin-top: 40px;
-  display: inline-grid;
-  margin-left: 50px;*/
 }
 
 footer h2 {

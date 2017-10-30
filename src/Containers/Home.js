@@ -18,7 +18,6 @@ export default class Home extends Component {
     }
   }
 
-
   handleInputChange = (event) => {
     let convertRunningWattsToInt = parseInt(event.target.dataset.runningwatts, 10)
     let convertStartingWattsToInt = parseInt(event.target.dataset.startingwatts, 10)
@@ -31,8 +30,41 @@ export default class Home extends Component {
     })
   }
 
-  render() {
+  onScroll = () => {
+    let lastScrollTop = 0;
+    let message = document.getElementsByClassName("message");
+    let styles = window.getComputedStyle(message[0]);
+    let marginTop = styles.getPropertyValue('margin-top');
+    let marginTopValue = parseInt(marginTop.slice(0, marginTop.length-2))
+    window.addEventListener("scroll", function(){
+      var st = window.pageYOffset
+      let strollVericalMargin = 0
+      if (st > lastScrollTop){
 
+
+        console.log(marginTopValue, "top", st, "st")
+
+        message[0].style.marginTop = st.toString()+"px"
+        // console.log(parseInt(marginTop.slice(0, marginTop.length-2),10), "hey")
+        console.log("strolling down")
+      } else {
+        message[0].style.marginTop = st.toString()+"px"
+
+        console.log(marginTopValue, "top", st, "st")
+
+        console.log("strolling up")
+      }
+      lastScrollTop = st;
+    }, false);
+
+
+  }
+
+  componentDidMount() {
+    this.onScroll()
+  }
+
+  render() {
     console.log(this.state.runningWatts, 'run')
     console.log(this.state.startingWatts,"start")
     console.log(this.state.totalStartingWatts, "total")
