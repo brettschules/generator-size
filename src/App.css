@@ -160,9 +160,8 @@ html .light {
 
 /*Total Watts Message*/
 .message {
-  margin-bottom: 14px;
-  margin-top: 3px;
-  font-size: 25px;
+  margin-top: 15px;
+  font-size: 25px!important;
   position: fixed;
   width: 100%;
 }
@@ -170,19 +169,27 @@ html .light {
   display: flex;
   margin-left: 20%;
   width: auto;
+  font-size: 25px;
+  line-height: 0%;
 }
 .message #running-watts {
   display: flex;
   margin-left: 25%;
   width: auto;
+  font-size: 25px;
+  line-height: 0%;
 }
 .message #starting-watts {
   display: flex;
-  margin-left: 30%
+  margin-left: 30%;
+  font-size: 25px;
+  line-height: 0%;
 }
 .message #total-watts {
   display: flex;
-  margin-left: 35%
+  margin-left: 35%;
+  font-size: 25px;
+  line-height: 0%;
 }
 
 /*container*/
@@ -191,9 +198,9 @@ html .light {
 }*/
 
 .check-list{
-  margin-top: 250px;
+  margin-top: 140px;
   overflow-x: scroll;
-  height: 300px;
+  height: 400px;
   width: auto;
 
 }
