@@ -163,6 +163,7 @@ html .light {
   margin-bottom: 14px;
   margin-top: 3px;
   font-size: 25px;
+  position: fixed;
 }
 .message #need {
   font-size: 1.5em;
@@ -178,8 +179,16 @@ html .light {
 }
 
 /*container*/
-.container {
+/*.container {
   display: relative;
+}*/
+
+.check-list{
+  margin-top: 20%;
+  overflow-x: scroll;
+  height: 300px;
+  width: auto;
+
 }
 
 h3 {

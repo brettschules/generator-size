@@ -40,8 +40,6 @@ export default class Home extends Component {
       var st = window.pageYOffset
       let strollVericalMargin = 0
       if (st > lastScrollTop){
-
-
         console.log(marginTopValue, "top", st, "st")
 
         message[0].style.marginTop = st.toString()+"px"
@@ -60,9 +58,9 @@ export default class Home extends Component {
 
   }
 
-  componentDidMount() {
-    this.onScroll()
-  }
+  // componentDidMount() {
+  //   this.onScroll()
+  // }
 
   render() {
     console.log(this.state.runningWatts, 'run')
