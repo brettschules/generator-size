@@ -164,18 +164,25 @@ html .light {
   margin-top: 3px;
   font-size: 25px;
   position: fixed;
+  width: 100%;
 }
 .message #need {
-  font-size: 1.5em;
+  display: flex;
+  margin-left: 20%;
+  width: auto;
 }
 .message #running-watts {
-  font-size: 1.5em;
+  display: flex;
+  margin-left: 25%;
+  width: auto;
 }
 .message #starting-watts {
-  font-size: 1.5em;
+  display: flex;
+  margin-left: 30%
 }
 .message #total-watts {
-  font-size: 1.5em;
+  display: flex;
+  margin-left: 35%
 }
 
 /*container*/
@@ -184,7 +191,7 @@ html .light {
 }*/
 
 .check-list{
-  margin-top: 20%;
+  margin-top: 250px;
   overflow-x: scroll;
   height: 300px;
   width: auto;
