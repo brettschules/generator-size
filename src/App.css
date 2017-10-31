@@ -158,11 +158,16 @@ html .light {
   right: 0;
 }
 
+.whole-app{
+  height: 100%;
+  overflow: hidden;
+}
+
 /*Total Watts Message*/
 .message {
   margin-top: 15px;
   font-size: 25px!important;
-  position: fixed;
+  /*position: fixed;*/
   width: 100%;
 }
 .message #need {
@@ -198,11 +203,10 @@ html .light {
 }*/
 
 .check-list{
-  margin-top: 140px;
+  margin-top: 30px;
   overflow-x: scroll;
-  height: 400px;
+  height: 50vh;
   width: auto;
-
 }
 
 h3 {
@@ -238,10 +242,15 @@ h3 {
   margin-left: auto;
 }
 
+footer {
+  padding-top: 4%;
+}
+
 footer h2 {
   display: flex;
   justify-content: center;
-  color: rgb(16, 81, 164)
+  color: rgb(16, 81, 164);
+  font-size: 3.5vw;
 }
 
 /*change numbers in message container*/
