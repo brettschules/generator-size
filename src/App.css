@@ -174,26 +174,26 @@ html .light {
   display: flex;
   margin-left: 20%;
   width: auto;
-  font-size: 25px;
+  font-size: 20px;
   line-height: 0%;
 }
 .message #running-watts {
   display: flex;
   margin-left: 25%;
   width: auto;
-  font-size: 25px;
+  font-size: 20px;
   line-height: 0%;
 }
 .message #starting-watts {
   display: flex;
   margin-left: 30%;
-  font-size: 25px;
+  font-size: 20px;
   line-height: 0%;
 }
 .message #total-watts {
   display: flex;
   margin-left: 35%;
-  font-size: 25px;
+  font-size: 20px;
   line-height: 0%;
 }
 
@@ -218,7 +218,7 @@ h3 {
 }
 
 .starting-watts-title {
-  padding-left: 17%
+  padding-left: 9%
 }
 
 .list-headers h3 {
