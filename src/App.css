@@ -274,3 +274,20 @@ footer h2 {
 .after {
   opacity:1;
 }
+
+@media screen and (max-width: 568px) and (max-width: 667px) {
+  .message #need {
+    font-size: 80%;
+  }
+
+  .message #running-watts {
+    font-size: 80%;
+  }
+  .message #starting-watts {
+    font-size: 80%;
+  }
+  .message #total-watts {
+    font-size: 80%;
+  }
+
+}

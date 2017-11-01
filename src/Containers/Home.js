@@ -53,9 +53,7 @@ export default class Home extends Component {
         console.log("strolling up")
       }
       lastScrollTop = st;
-    }, false);
-
-
+    });
   }
 
   // componentDidMount() {
