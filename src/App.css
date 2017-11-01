@@ -174,26 +174,26 @@ html .light {
   display: flex;
   margin-left: 17%;
   width: auto;
-  font-size: 100%;
+  font-size: 90%;
   line-height: 0%;
 }
 .message #running-watts {
   display: flex;
   margin-left: 22%;
   width: auto;
-  font-size: 100%;
+  font-size: 90%;
   line-height: 0%;
 }
 .message #starting-watts {
   display: flex;
-  margin-left: 27%;
-  font-size: 100%;
+  margin-left: 25%;
+  font-size: 90%;
   line-height: 0%;
 }
 .message #total-watts {
   display: flex;
-  margin-left: 32%;
-  font-size: 100%;
+  margin-left: 30%;
+  font-size: 90%;
   line-height: 0%;
 }
 
@@ -209,12 +209,20 @@ html .light {
   width: auto;
 }
 
+/*.check-list::-webkit-scrollbar {
+    margin-left: 550px;
+}*/
+
+.jobsite {
+  margin-left: -2%;
+}
+
 h3 {
   font-size: 1.2em;
 }
 
 .running-watts-title {
-  padding-left: 24%
+  padding-left: 20%
 }
 
 .starting-watts-title {
