@@ -278,16 +278,23 @@ footer h2 {
 @media screen and (max-width: 568px) and (max-width: 667px) {
   .message #need {
     font-size: 75%;
+    margin-left: 15%;
+
   }
 
   .message #running-watts {
     font-size: 75%;
+    margin-left: 20%;
   }
   .message #starting-watts {
     font-size: 75%;
+    margin-left: 25%;
+
   }
   .message #total-watts {
     font-size: 75%;
+    margin-left: 27%;
+
   }
 
 }
