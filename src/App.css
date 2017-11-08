@@ -197,6 +197,11 @@ html .light {
   line-height: 0%;
 }
 
+.clear-selection {
+  margin-left: 34%;
+  margin-top: 1%;
+}
+
 /*container*/
 /*.container {
   display: relative;

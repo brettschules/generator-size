@@ -7,6 +7,7 @@ export default class TotalWattsMessage extends Component{
   }
 
   // this will update the watts values in message container using css transition
+
   updateRunningWatts = () => {
     var run = document.getElementById("running-watts")
     run.className = "new"
@@ -39,7 +40,6 @@ export default class TotalWattsMessage extends Component{
 
     if (parseInt(nextProps.currentStartingWatts, 10) !== 0)
       this.updateStartingWatts()
-      console.log(nextProps.currentStartingWatts)
   }
 
   render() {

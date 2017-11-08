@@ -3,7 +3,7 @@ import Checkboxes from '../Components/Checkboxes'
 import TotalWattsMessage from '../Components/TotalWattsMessage'
 import DataAppliancesAPI from '../dataAppliancesAPI'
 import Footer from '../Components/Footer'
-import { Col, Table } from 'react-bootstrap';
+import { Col, Table, Button } from 'react-bootstrap';
 
 
 export default class Home extends Component {
@@ -30,44 +30,46 @@ export default class Home extends Component {
     })
   }
 
-  onScroll = () => {
-    let lastScrollTop = 0;
-    let message = document.getElementsByClassName("message");
-    let styles = window.getComputedStyle(message[0]);
-    let marginTop = styles.getPropertyValue('margin-top');
-    let marginTopValue = parseInt(marginTop.slice(0, marginTop.length-2))
-    window.addEventListener("scroll", function(){
-      var st = window.pageYOffset
-      let strollVericalMargin = 0
-      if (st > lastScrollTop){
-        console.log(marginTopValue, "top", st, "st")
+  handleClearSelection = () => {
 
-        message[0].style.marginTop = st.toString()+"px"
-        // console.log(parseInt(marginTop.slice(0, marginTop.length-2),10), "hey")
-        console.log("strolling down")
-      } else {
-        message[0].style.marginTop = st.toString()+"px"
-
-        console.log(marginTopValue, "top", st, "st")
-
-        console.log("strolling up")
-      }
-      lastScrollTop = st;
-    });
   }
 
-  // componentDidMount() {
-  //   this.onScroll()
+  // onScroll = () => {
+  //   let lastScrollTop = 0;
+  //   let message = document.getElementsByClassName("message");
+  //   let styles = window.getComputedStyle(message[0]);
+  //   let marginTop = styles.getPropertyValue('margin-top');
+  //   let marginTopValue = parseInt(marginTop.slice(0, marginTop.length-2))
+  //   window.addEventListener("scroll", function(){
+  //     var st = window.pageYOffset
+  //     let strollVericalMargin = 0
+  //     if (st > lastScrollTop){
+  //       console.log(marginTopValue, "top", st, "st")
+  //
+  //       message[0].style.marginTop = st.toString()+"px"
+  //       // console.log(parseInt(marginTop.slice(0, marginTop.length-2),10), "hey")
+  //       console.log("strolling down")
+  //     } else {
+  //       message[0].style.marginTop = st.toString()+"px"
+  //
+  //       console.log(marginTopValue, "top", st, "st")
+  //
+  //       console.log("strolling up")
+  //     }
+  //     lastScrollTop = st;
+  //   });
   // }
 
+  // Did not end up needing this, used css instead :p
+
   render() {
-    console.log(this.state.runningWatts, 'run')
-    console.log(this.state.startingWatts,"start")
-    console.log(this.state.totalStartingWatts, "total")
     return (
       <div>
         <div className="container">
           <TotalWattsMessage runningWatts = {this.state.runningWatts} startingWatts = {this.state.startingWatts} totalStartingWatts = {this.state.totalStartingWatts} currentStartingWatts={this.state.currentStartingWatts}/>
+            <div>
+              <Button className="clear-selection" bsStyle="primary">Clear Selection</Button>
+            </div>
           <div className="check-list">
             <Col  md={4}>
             <div className="recreational-use">
