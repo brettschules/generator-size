@@ -30,8 +30,24 @@ export default class Home extends Component {
     })
   }
 
-  handleClearSelection = () => {
+  clearCheckBoxes = () => {
+    var arrayOfCheckboxes = document.getElementsByClassName("checkbox")
+    for(let i=0; i<arrayOfCheckboxes.length; i++) {
+      if (arrayOfCheckboxes[i].checked)
+        arrayOfCheckboxes[i].checked = false
+    }
+  }
 
+
+  handleClearSelection = (event) => {
+    this.setState({
+      currentStartingWatts: 0,
+      runningWatts: 0,
+      startingWatts: 0,
+      totalStartingWatts: 0,
+      checkboxesResults: ""
+    })
+    this.clearCheckBoxes()
   }
 
   // onScroll = () => {
@@ -63,12 +79,13 @@ export default class Home extends Component {
   // Did not end up needing this, used css instead :p
 
   render() {
+    console.log(this.state.checkboxesResults, "checkboxesResults")
     return (
       <div>
         <div className="container">
           <TotalWattsMessage runningWatts = {this.state.runningWatts} startingWatts = {this.state.startingWatts} totalStartingWatts = {this.state.totalStartingWatts} currentStartingWatts={this.state.currentStartingWatts}/>
             <div>
-              <Button className="clear-selection" bsStyle="primary">Clear Selection</Button>
+              <Button className="clear-selection" bsStyle="primary" onClick={this.handleClearSelection}>Clear Selection</Button>
             </div>
           <div className="check-list">
             <Col  md={4}>
