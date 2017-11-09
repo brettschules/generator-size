@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import { Menu } from 'semantic-ui-react'
+import {Link} from 'react-router-dom'
+
 
 export default class Navbar extends Component {
   constructor() {
@@ -20,9 +22,9 @@ export default class Navbar extends Component {
 
     return (
       <Menu inverted size="massive" fluid={true}>
-        <Menu.Item name='Home' active={activeItem === 'home'} onClick={this.handleItemClick} />
-        <Menu.Item name='About' active={activeItem === 'messages'} onClick={this.handleItemClick} />
-        <Menu.Item name='Contact' active={activeItem === 'friends'} onClick={this.handleItemClick} />
+        <Menu.Item as={Link} to="/" name='Home' active={activeItem === 'home'} onClick={this.handleItemClick} />
+        <Menu.Item as={Link} to="/about" name='About' active={activeItem === 'messages'} onClick={this.handleItemClick} />
+        <Menu.Item as={Link} to="/contact" name='Contact' active={activeItem === 'friends'} onClick={this.handleItemClick} />
       </Menu>
     )
   }
