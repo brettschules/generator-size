@@ -303,3 +303,13 @@ footer h2 {
   }
 
 }
+
+.about {
+  text-align: center;
+}
+
+.about p {
+  vertical-align: middle;
+  margin-top: 15%;
+  margin: 10%;
+}
