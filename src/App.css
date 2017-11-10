@@ -197,6 +197,8 @@ html .light {
   line-height: 0%;
 }
 
+/*clear selection button*/
+
 .clear-selection {
   margin-left: 34%;
   margin-top: 1%;
@@ -206,6 +208,8 @@ html .light {
 /*.container {
   display: relative;
 }*/
+
+/*check list container*/
 
 .check-list{
   margin-top: 30px;

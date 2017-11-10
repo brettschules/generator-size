@@ -32,6 +32,7 @@ export default class Home extends Component {
     })
   }
 
+  // Allows to clear all checkboxes
   clearCheckBoxes = () => {
     var arrayOfCheckboxes = document.getElementsByClassName("checkbox")
     for(let i=0; i<arrayOfCheckboxes.length; i++) {
