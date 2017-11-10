@@ -9,6 +9,7 @@ import { Col, Table, Button } from 'react-bootstrap';
 export default class Home extends Component {
   constructor() {
     super()
+    // keeps try of watts info as checkboxes are checked
     this.state = {
       currentStartingWatts: 0,
       runningWatts: 0,
@@ -21,6 +22,7 @@ export default class Home extends Component {
   handleInputChange = (event) => {
     let convertRunningWattsToInt = parseInt(event.target.dataset.runningwatts, 10)
     let convertStartingWattsToInt = parseInt(event.target.dataset.startingwatts, 10)
+    // setting the state as checkboxes are checked
     this.setState({
       currentStartingWatts: event.target.dataset.startingwatts,
       checkboxesResults: {...this.state.checkboxesResuls, [event.target.name]: [convertRunningWattsToInt, convertStartingWattsToInt]},
